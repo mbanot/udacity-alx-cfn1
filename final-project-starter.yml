@@ -351,8 +351,8 @@ Resources:
             - !Ref PrivateSubnet2 
             LaunchConfigurationName:
                 Ref: WebAppLaunchConfig
-            MinSize: '4'
-            MaxSize: '6'
+            MinSize: !Ref MinASGSize
+            MaxSize: !Ref MaxASGSize
             TargetGroupARNs:
             -   Ref: WebAppTargetGroup
 
